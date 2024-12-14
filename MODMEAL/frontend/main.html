@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODMEAL - สั่งอาหารจากร้านในโรงอาหาร</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <!-- Header -->
+<header>
+  <div class="top-nav">
+    <!-- โลโก้ -->
+    <img src="MAIN_Element/logo.png" alt="Modmeal Logo" class="logo">
+    
+    <!-- กลางข้อความ -->
+    <div class="header-center">
+      <h1>MODMEAL</h1>
+      <p>เว็บสำหรับสั่งจองอาหารจากร้านในโรงอาหาร เพื่อเด็กมจธ.</p>
+    </div>
+    
+    <!-- เมนูนำทาง -->
+    <nav>
+      <ul>
+        <li><a href="#home">หน้าแรก</a></li>
+        <li><a href="#restaurants">ร้านค้า</a></li>
+        <li><a href="#menu">หมวดหมู่</a></li>
+        <li><a href="#order-status">สถานะคำสั่งซื้อ</a></li>
+        <li><a href="#contact">ติดต่อเรา</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Carousel Section -->
+<div class="carousel">
+  <div class="slides">
+    <div class="slide"><img src="Main_Banner_img/banner1.jpg" alt="โปรโมชั่น 1"></div>
+    <div class="slide"><img src="Main_Banner_img/banner2.jpg" alt="โปรโมชั่น 2"></div>
+    <div class="slide"><img src="Main_Banner_img/banner3.gif" alt="โปรโมชั่น 3"></div>
+  </div>
+  <!-- Dots for navigation -->
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</div>
+
+<!-- Restaurant Section -->
+<section class="restaurant-list" id="restaurants">
+
+  <div class="restaurant-card">
+    <img src="MAIN_Element\logoชิกกี้.jpg" alt="ร้านชิกกี้ชิก">
+    <h3>ชิกกี้ชิก</h3>
+    <p>หอหญิง</p>
+    <p>สถานะ: <span class="status-open">เปิด</span></p>
+    <p>จำนวนคิว: <span class="queue-number">5</span></p>
+    <a href="CODEInShop/ชิกกี้.html" class="btn">ดูเมนู</a>
+  </div>
+  <div class="restaurant-card">
+    <img src="MAIN_Element/ร้านA.jpg" alt="ร้านครัวน้องพันช์">
+    <h3>ครัวน้องพันช์</h3>
+    <p>หอหญิง</p>
+    <p>สถานะ: <span class="status-closed">ปิด</span></p>
+    <p>จำนวนคิว: <span class="queue-number">3</span></p>
+    <a href="restaurant/krua-nong-punch.html" class="btn">ดูเมนู</a>
+  </div>
+  <div class="restaurant-card">
+    <img src="MAIN_Element/ร้านB.jpg" alt="ร้านสปาเกตตี้มาย">
+    <h3>สปาเกตตี้มาย</h3>
+    <p>หอหญิง</p>
+    <p>สถานะ: <span class="status-open">เปิด</span></p>
+    <p>จำนวนคิว: <span class="queue-number">2</span></p>
+    <a href="restaurant/spaghetti-mai.html" class="btn">ดูเมนู</a>
+  </div>
+  <div class="restaurant-card">
+    <img src="MAIN_Element/banner.jpg" alt="ร้าน4">
+    <h3>ร้าน4</h3>
+    <p>หอหญิง</p>
+    <p>สถานะ: <span class="status-open">เปิด</span></p>
+    <p>จำนวนคิว: <span class="queue-number">2</span></p>
+    <a href="restaurant/spaghetti-mai.html" class="btn">ดูเมนู</a>
+  </div>
+  
+</section>
+
+<!-- Menu Categories -->
+<section class="menu-categories" id="menu">
+  <h2>เมนูยอดฮิต</h2>
+  <ul>
+    <li>
+      <img src="MAIN_Element/ข้าวราดแกง.jpg" alt="ไอคอนข้าวราดแกง" class="menu-icon">
+      <a href="menu-krapao.html">ราดแกง</a>
+    </li>
+    <li>
+      <img src="MAIN_Element/กะเพรา.jpg" alt="ไอคอนกะเพรา" class="menu-icon">
+      <a href="menu-krapao.html">กะเพรา</a>
+    </li>
+      <li>
+      <img src="MAIN_Element/ข้าวผัด.jpg" alt="ไอคอนข้าวผัด" class="menu-icon">
+      <a href="menu-krapao.html">ข้าวผัด</a>
+    </li>
+    <li>
+      <img src="MAIN_Element/ข้าวไข่.jpg" alt="ไอคอนข้าวไข่ต่างๆ" class="menu-icon">
+      <a href="menu-egg-rice.html">ข้าวไข่ต่างๆ</a>
+    </li>
+    <li>
+      <img src="MAIN_Element/ผัดพริก.jpg" alt="ไอคอนผัดพริก" class="menu-icon">
+      <a href="menu-stir-fried-chili.html">ผัดพริก</a>
+    </li>
+    <li>
+      <img src="MAIN_Element/ก๋วยเต๊๋ยว.jpg" alt="ไอคอนก๋วยเตี๋ยว" class="menu-icon">
+      <a href="menu-noodles.html">ก๋วยเตี๋ยว</a>
+    </li>
+
+  </ul>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 Modmeal. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="#terms">ข้อกำหนดการใช้งาน</a></li>
+    <li><a href="#privacy">นโยบายความเป็นส่วนตัว</a></li>
+    <li><a href="#contact">ติดต่อเรา</a></li>
+  </ul>
+</footer>
+<script src="scriptmain.js"></script>
+</body>
+</html>

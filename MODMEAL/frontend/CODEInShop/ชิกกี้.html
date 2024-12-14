@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ชิกกี้ชิก - MODMEAL</title>
+  <link rel="stylesheet" href="ชิกกี้.css">
+  <script src="Cost.js" defer></script>
+</head>
+<body>
+
+  <div class="store-header">
+    <div class="store-header-container">
+      <!-- โลโก้ร้าน -->
+      <img src="InShop_img\ชิกกี้\logoชิกกี้.jpg" alt="โลโก้ร้าน" class="store-logo">
+      
+      <!-- ข้อมูลร้าน -->
+      <div class="store-info">
+        <h1>ร้านชิกกี้ชิก</h1>
+        <h2>หอหญิง</h2>
+        <p>เวลาเปิด-ปิด: 9:00 น. - 18:00 น.</p>
+        <p>จำนวนคิว: 5</p>
+      </div>
+    </div>
+  </div>
+  
+<div class="menu-section">
+  <h2>เมนูอาหาร</h2>
+
+  <!-- หมวดหมู่: อาหารตามสั่ง -->
+  <div class="menu-category">
+    <h3>อาหารตามสั่ง</h3>
+    <div class="menu-grid">
+
+      <!-- กะเพรา-->
+      <div class="menu-item" onclick="openOrderModal('กะเพรา', 40, [
+      { name: 'หมู', price: 0 },
+      { name: 'ไก่', price: 0 },
+      { name: 'กุ้ง', price: 5 },
+      { name: 'ไข่ดาว', price: 10 },
+      { name: 'ไข่เจียว', price: 15 },
+      { name: 'พิเศษ', price: 10 }
+    ])">
+        <div class="menu-image">
+          <img src="InShop_img\ชิกกี้\กะเพรา.jpg" alt="กะเพรา" />
+        </div>
+        <div class="menu-details">
+          <h3>กะเพรา</h3>
+          <p>ราคา: 40-60 บาท</p>
+        </div>
+      </div>
+      
+      <!-- ข้าวผัด-->
+      <div class="menu-item" onclick="openOrderModal('ข้าวผัด', 40, [
+      { name: 'หมู', price: 0 },
+      { name: 'ไก่', price: 0 },
+      { name: 'กุ้ง', price: 5 },
+      { name: 'ไข่ดาว', price: 10 },
+      { name: 'ไข่เจียว', price: 15 },
+      { name: 'พิเศษ', price: 10 }
+    ])">
+          <div class="menu-image">
+            <img src="InShop_img\ชิกกี้\ข้าวผัด.jpg" alt="ข้าวผัด" />
+          </div>
+          <div class="menu-details">
+            <h3>ข้าวผัด</h3>
+            <p>ราคา: 40-70 บาท</p>
+          </div>
+        </div>
+
+      <div class="menu-item" onclick="openOrderModal('ข้าวไข่ข้น', 40, [
+        { name: 'หมู', price: 0 },
+        { name: 'ไก่', price: 0 },
+        { name: 'กุ้ง', price: 5 },
+        { name: 'ต้มยำ', price: 10 },
+        { name: 'พิเศษ', price: 10 }
+      ])">
+        <div class="menu-image">
+          <img src="InShop_img\ชิกกี้\ไข่ข้น.jpg" alt="ข้าวไข่ข้น" />
+        </div>
+        <div class="menu-details">
+          <h3>ข้าวไข่ข้น</h3>
+          <p>ราคา: 40-60 บาท</p>
+        </div>
+      </div>
+
+        <!-- Modal Popup -->
+        <div id="orderModal" class="modal">
+          <div class="modal-content">
+            <h3 id="menuName"></h3>
+            <p id="basePrice"></p>
+            <div class="options" id="optionsContainer"></div>
+            <p id="priceTotal">รวมทั้งหมด:</p>
+            <button onclick="addToCart()">เพิ่มในตะกร้า</button>
+            <button onclick="closeOrderModal()">ยกเลิก</button>
+          </div>
+        </div>
+      <!-- เพิ่มเมนูอื่นในหมวดนี้ -->
+    </div>
+  </div>
+
+  <!-- หมวดหมู่: ก๋วยเตี๋ยว -->
+  <div class="menu-category">
+    <h3>ก๋วยเตี๋ยว</h3>
+    <div class="menu-grid">
+      <div class="menu-item"onclick="openOrderModal('ก๋วยเตี๋ยว', 40, [
+      { name: 'เส้นใหญ่', price: 0 },
+      { name: 'เส้นเล็ก', price: 0 },
+      { name: 'เส้นหมี่', price: 0 },
+      { name: 'น้ำตก', price: 0 },
+      { name: 'น้ำใส', price: 0 },
+      { name: 'ต้มยำ', price: 5 },
+      { name: 'พิเศษ', price: 10 }
+    ])">
+        <div class="menu-image">
+          <img src="/Shop_img/%E0%B8%8A%E0%B8%B4%E0%B8%81%E0%B8%81%E0%B8%B5%E0%B9%89/.jpg" alt="ก๋วยเตี๋ยวเรือ" />
+        </div>
+        <div class="menu-details">
+          <h3>ก๋วยเตี๋ยวเรือ</h3>
+          <p>ราคา: 40 บาท</p>
+        </div>
+      </div>
+      
+      <div class="menu-item">
+        <div class="menu-image">
+          <img src="images/krapao.jpg" alt="เมนูA" />
+        </div>
+        <div class="menu-details">
+          <h3>เมนูA</h3>
+          <p>ราคา: 40-70 บาท</p>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-image">
+          <img src="images/krapao.jpg" alt="เมนูB" />
+        </div>
+        <div class="menu-details">
+          <h3>เมนูB</h3>
+          <p>ราคา: 40-70 บาท</p>
+        </div>
+      </div>
+      
+      <div class="menu-item">
+        <div class="menu-image">
+          <img src="images/krapao.jpg" alt="เมนูC" />
+        </div>
+        <div class="menu-details">
+          <h3>เมนูC</h3>
+          <p>ราคา: 40-70 บาท</p>
+        </div>
+      </div>
+      <!-- เพิ่มเมนูอื่นในหมวดนี้ -->
+    </div>
+          <!-- Modal Popup -->
+    <div id="orderModal" class="modal">
+      <div class="modal-content">
+        <h3 id="menuName"></h3>
+        <p id="basePrice"></p>
+        <div class="options" id="optionsContainer"></div>
+        <p id="priceTotal">รวมทั้งหมด: </p>
+        <button onclick="closeOrderModal()">ยืนยัน</button>
+      </div>
+    </div>
+              
+  </div>
+
+  <!-- หมวดหมู่: อาหารทานเล่น -->
+  <div class="menu-category">
+    <h3>อาหารทานเล่น</h3>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-image">
+          <img src="/Shop_img/%25E0%25B8%258A%25E0%25B8%25B4%25E0%25B8%2581%25E0%25B8%2581%25E0%25B8%25B5%25E0%25B9%2589/%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%99%E0%B8%9F%E0%B8%A3%E0%B8%B2%E0%B8%A2.jpg" alt="เฟรนช์ฟรายส์" />
+        </div>
+        <div class="menu-details">
+          <h3>เฟรนช์ฟรายส์</h3>
+          <p>ราคา: 30 บาท</p>
+        </div>
+      </div>
+
+            
+      <div class="menu-item">
+        <div class="menu-image">
+          <img src="/Shop_img/%25E0%25B8%258A%25E0%25B8%25B4%25E0%25B8%2581%25E0%25B8%2581%25E0%25B8%25B5%25E0%25B9%2589/%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95.jpg" alt="เมนูA" />
+        </div>
+        <div class="menu-details">
+          <h3>นักเก็ต 4ชิ้น</h3>
+          <p>ราคา: 40 บาท</p>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-image">
+          <img src="/Shop_img/%25E0%25B8%258A%25E0%25B8%25B4%25E0%25B8%2581%25E0%25B8%2581%25E0%25B8%25B5%25E0%25B9%2589/%E0%B9%84%E0%B8%81%E0%B9%88%E0%B8%97%E0%B8%AD%E0%B8%94.jpg" alt="เมนูB" />
+        </div>
+        <div class="menu-details">
+          <h3>ไก่ทอด 1ชิ้น</h3>
+          <p>ราคา: 20 บาท</p>
+        </div>
+      </div>
+      
+      <div class="menu-item">
+        <div class="menu-image">
+          <img src="images/krapao.jpg" alt="เมนูC" />
+        </div>
+        <div class="menu-details">
+          <h3>เมนูC</h3>
+          <p>ราคา: 40-70 บาท</p>
+        </div>
+      </div>
+      <!-- เพิ่มเมนูอื่นในหมวดนี้ -->
+    </div>
+        
+  </div>
+  
+
+</div>
+
+<!-- ตะกร้าสินค้า -->
+<div id="cartSection">
+  <h3>รายการสินค้าทั้งหมด</h3>
+  <ul id="cartItems"></ul>
+  <p id="cartTotal">รวมทั้งหมด: 0 บาท</p>
+  <button onclick="confirmOrder()">ยืนยันคำสั่งซื้อ</button>
+</div>
+
+  <script>
+    function goBack() {
+      if (document.referrer) {
+        history.back();
+      } else {
+        window.location.href = '../index.html';
+      }
+    }
+  </script>
+  
+  <footer>
+    <p>&copy; 2024 Modmeal. All rights reserved.</p>
+  </footer>
+</body>
+</html>

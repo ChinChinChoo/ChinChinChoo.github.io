@@ -1,0 +1,257 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: 'Noto Sans', 'Noto Sans Thai', sans-serif;
+  line-height: 1.6;
+  background-color: #FFF4E0;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+/* Header */
+header {
+  background-color: #FF6F00;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.top-nav .logo {
+  height: 60px;
+}
+
+.top-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.top-nav ul li {
+  margin-left: 15px;
+}
+
+.top-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+  background-color: #E63946;
+  border-radius: 5px;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* Restaurant Section */
+.restaurant-list {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.restaurant-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.restaurant-card h3 {
+  font-size: 1.5em;
+  color: #FF6F00;
+}
+
+.restaurant-card p {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.restaurant-card button {
+  background-color: #FF6F00;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.restaurant-card button:hover {
+  background-color: #E63946;
+  transform: scale(1.05);
+}
+
+/* Order Status Section */
+.order-status {
+  padding: 20px;
+  background-color: #FFF4E0;
+  border-radius: 12px;
+  margin: 20px auto;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-status h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  color: #FF6F00;
+}
+
+.order-status ul {
+  list-style: none;
+}
+
+.order-status li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-status li:last-child {
+  border-bottom: none;
+}
+
+.order-stage {
+  font-weight: bold;
+  color: #E63946;
+}
+
+/* Footer */
+footer {
+  background-color: #FF6F00;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Menu Categories */
+.menu-categories ul {
+  list-style: none;
+  display: flex; /* เปลี่ยนเป็น flex เพื่อเรียงแนวนอน */
+  flex-wrap: wrap; /* ให้แถวใหม่ขึ้นอัตโนมัติหากพื้นที่ไม่พอ */
+  justify-content: center; /* จัดให้อยู่ตรงกลาง */
+  padding: 0;
+  margin: 0;
+}
+
+.menu-categories ul li {
+  text-align: center;
+  background-color: #fff;
+  padding: 0;
+  border-radius: 8px;
+  width: 180px; /* กำหนดความกว้าง */
+  margin: 10px; /* เพิ่มระยะห่างระหว่างการ์ด */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* ทำให้รูปภาพอยู่ในกรอบ */
+}
+
+.menu-categories ul li img {
+  width: 100%; /* รูปภาพเต็มกรอบ */
+  height: 150px; /* กำหนดความสูงของรูปภาพ */
+  object-fit: cover; /* จัดให้รูปภาพพอดีกับกรอบ */
+  display: block;
+}
+
+.menu-categories ul li a {
+  display: block;
+  padding: 10px 0; /* เพิ่มระยะห่างระหว่างชื่อกับรูป */
+  color: #FF6F00; /* สีส้ม */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu-categories ul li a:hover {
+  color: #E63946; /* สีแดง */
+}
